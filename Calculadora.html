@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Projeto</title>
+    <link rel="stylesheet" href="Calculadora.css">
+</head>
+<body>
+    <div class="Background">      
+                <div class="Calculadora">
+                    <div class="tela">
+                        <p id="resultado"></p>
+
+                        <p id="resposta"></p>
+                    </div>
+                <div class="Calculadora1">
+                    <table>
+                        <tr>
+                            <td><button type="button" class="Sinais" onclick="Limpar()">C</button></td>
+                            <td><button type="button" class="Sinais"  onclick="inserir('%')">%</button></td>
+                            <td><button type="button" class="Sinais"  onclick="inserir('/')">/</button></td>
+                            <td><button type="button" class="Sinais"  onclick="inserir('*')">X</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="Sinais" onclick="inserir('7')">7</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('8')">8</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('9')">9</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('-')">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="Sinais" onclick="inserir('4')">4</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('5')">5</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('6')">6</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('+')">+</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="Sinais" onclick="inserir('1')">1</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('2')">2</button></td>
+                            <td><button type="button" class="Sinais" onclick="inserir('3')">3</button></td>
+                            <td rowspan="2"><button type="button" class="Sinais1" onclick="calcular()">=</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="Sinais" onclick="inserir('0')">0</button></td>
+                            <td><button type="button" class="Sinais"  onclick="inserir('.')">.</button></td>
+                            <td><button type="button" class="Sinais" onclick="apagar()"><</button></td>
+                        </tr>
+                    </table>
+                </div>
+             </div>
+             <script>
+                 function inserir(num)
+                 {                                      
+                       var numero = document.getElementById("resultado").innerHTML
+
+                        if(numero.length <= 20){
+                            document.getElementById("resultado").innerHTML = numero + num
+                        }
+
+                 }
+
+                 function Limpar(){
+                    document.getElementById("resultado").innerHTML = ""
+                    document.getElementById("resposta").innerHTML = ""
+
+                 }
+
+                 function apagar(){
+                  var resultado = document.getElementById("resultado").innerHTML
+                  document.getElementById("resultado").innerHTML = resultado.substring(0, resultado.length - 1)
+                 }
+
+                 function calcular(){
+                    var resultado = document.getElementById("resultado").innerHTML
+
+                    if(resultado){
+                        document.getElementById("resposta").innerHTML = eval(resultado)
+                    }
+                 }
+             </script>
+    
+</body>
+</html>

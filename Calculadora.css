@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.Background{
+    margin: auto;
+    background-image: linear-gradient(to right, #9DCFF5, #ADAFDB, #D2B3F2, #E8ACE5);
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.Calculadora{
+    background-color:  white;
+    width: 60vh;
+    height: 80vh;
+    border: 5px solid #4C4FDB;
+}
+.Calculadora1{
+    background-color: #787ADB;
+    width: 60vh;
+    height: 68vh;
+    justify-content: center;
+    display: flex;
+}
+.Sinais{
+    margin-top: 6px;
+    width: 14vh;
+    height: 12vh;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: #8A8FDB;
+    border: 6px solid #4B54DB;
+    color: white;
+}
+
+.Sinais1{
+    cursor: pointer;
+    margin-top: 4px;
+    width: 14vh;
+    height: 25vh;
+    font-size: 40px;
+    background-color: #8A8FDB;
+    border: 6px solid #4B54DB;
+    color: white;
+}
+.container{
+    justify-content: flex-start;
+    display: flex;
+}
+
+.Sinais:hover{
+    background-color: #169FF5;
+}
+.Sinais1:hover{
+    background-color: #169FF5;
+}
+.Sinais:active{
+    background-color: white;
+}
+.Sinais1:active{
+    background-color: white;
+}
+#resultado{
+    font-size: 26px;
+    text-align: right;
+    margin-right:5px;
+    color: white;
+
+}
+#resposta{
+    font-size: 23px;
+    text-align: left;
+    color: white;
+    padding-top: 5px;
+    margin-left: 15px;
+}
+.tela{
+    background-color: #9DCFF5;
+    height: 12vh;
+}
